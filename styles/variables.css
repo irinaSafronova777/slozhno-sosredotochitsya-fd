@@ -4,10 +4,11 @@
 */
 
 :root {
-  --background-image-page: url('../images/cover-image-dark.png');
+  --background-image-page: url("../images/cover-image-dark.png");
   --background-color-page: #000028;
-  --h1-header-color: #DB00FF;
-  --text-selection-color: #FF0070;
+  --h1-header-color: #db00ff;
+  --text-selection-color: #ff0070;
   --text-dark: #000028;
-  --text-ligth: #F1B2CE;
+  --text-ligth: #f1b2ce;
+  --rec-display: block;
 }
