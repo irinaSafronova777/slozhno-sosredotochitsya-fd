@@ -7,7 +7,7 @@
   background-size: cover;
   font-size: 18px;
   line-height: 1.295em;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .header.decorated-zone {
@@ -44,8 +44,8 @@
   position: absolute;
   height: 25px;
   width: 25px;
-  border-top: 1px solid var(--text-selection-color);
-  border-right: 1px solid var(--text-selection-color);
+  border-top: 1px solid var(--decorated-zone-color);
+  border-right: 1px solid var(--decorated-zone-color);
   top: 10px;
   right: 10px;
 }
@@ -142,11 +142,16 @@
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: 400;
   background-color: transparent;
-  color: var(--text-selection-color);
+  color: var(--button-color);
   margin-right: 5px;
   border: 1px solid transparent;
   padding: 1.5px 13px;
   min-height: 26px;
+}
+
+.header__theme-menu-button:focus {
+border-bottom: 1px solid var(--button-color) ;
+outline: none;
 }
 
 @media (width>=768px) {
@@ -156,12 +161,16 @@
 }
 
 .header__theme-menu-button:hover {
-  border-color: var(--text-selection-color);
+  border-color: var(--button-color-with-opacity);
 }
 
-.header_title,
-.footer_title {
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border-color: var(--button-color);
+}
+
+.title-word {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 83%;
   color: var(--h1-header-color);
@@ -173,6 +182,9 @@
     justify-self: start;
     margin-top: 70px;
     margin-left: -20px;
+  } 
+  .title-word {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -233,10 +245,8 @@
   align-content: baseline;
 }
 
-.topic-caption {
+.content-caption.topic-caption {
   font-weight: 400;
-  background-color: var(--text-selection-color);
-  color: var(--text-dark);
 }
 
 .caption {
@@ -320,16 +330,29 @@
 }
 
 .link {
+  position: relative;
+  z-index: 4;
   text-decoration: none;
-  text-shadow: 4px 4px 0px var(--text-selection-color);
+  text-shadow: 2px 1px 0px var(--text-selection-color);
 }
 
-.link:hover {
-  text-decoration: underline;
+.link::after {
+  content: '';
+  display: none;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid var(--text-ligth);
+}
+
+.link:hover:after {
+  display: block;
 }
 
 .link:focus {
   border: 1px solid var(--text-ligth);
+  outline: none;
 }
 
 @media (width >= 768px) {

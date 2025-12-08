@@ -11,4 +11,7 @@
   --text-dark: #000028;
   --text-ligth: #f1b2ce;
   --rec-display: block;
+  --button-color: var(--text-selection-color);
+  --button-color-with-opacity: rgba(255, 0, 112, 0.4);
+  --decorated-zone-color: var(--text-selection-color);
 }

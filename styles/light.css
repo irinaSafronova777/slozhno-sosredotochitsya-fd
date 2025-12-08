@@ -12,4 +12,22 @@
   --text-dark: #353430;
   --text-ligth: #353430;
   --rec-display: none;
+  --button-color: var(--text-dark);
+  --button-color-with-opacity: rgba(50, 49, 45, 0.4);
+  --decorated-zone-color: var(--text-dark);
+}
+
+@media ( prefers-color-scheme: light ) {
+  :root {
+    --background-image-page: url("../images/cover-image-light.png");
+    --background-color-page: #fff1f7;
+    --h1-header-color: #ffc2e6;
+    --text-selection-color: #ff8dcb;
+    --text-dark: #353430;
+    --text-ligth: #353430;
+    --rec-display: none;
+    --button-color: var(--text-dark);
+    --button-color-with-opacity: rgba(50, 49, 45, 0.4);
+    --decorated-zone-color: var(--text-dark);
+  }
 }
