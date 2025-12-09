@@ -55,8 +55,8 @@
   position: absolute;
   height: 25px;
   width: 25px;
-  border-left: 1px solid var(--text-selection-color);
-  border-bottom: 1px solid var(--text-selection-color);
+  border-left: 1px solid var(--decorated-zone-color);
+  border-bottom: 1px solid var(--decorated-zone-color);
   bottom: 10px;
   left: 10px;
 }
@@ -250,7 +250,7 @@ outline: none;
 }
 
 .caption {
-  color: var(--text-selection-color);
+  color: var(--caption-color);
 }
 
 .content-caption {
